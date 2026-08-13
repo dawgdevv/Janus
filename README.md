@@ -1,6 +1,6 @@
-# Blastline
+# Janus
 
-Blastline is a graph-native supply-chain incident tool for JavaScript and TypeScript repositories.
+Janus is a graph-native supply-chain incident tool for JavaScript and TypeScript repositories.
 
 It connects arbitrary repositories into a provider-independent security workspace, records dependency snapshots over time, and helps answer:
 
@@ -15,7 +15,7 @@ It connects arbitrary repositories into a provider-independent security workspac
 
 Tools like CVE Lite CLI are strong at analyzing a single repository.
 
-Blastline starts where single-repository scanning stops.
+Janus starts where single-repository scanning stops.
 
 A workspace can contain repositories from anywhere:
 
@@ -34,7 +34,7 @@ Repositories are linked using stable workspace and repository IDs rather than re
 ```text
 Repository
    ↓
-Blastline CLI
+Janus CLI
    ↓
 CVE Lite + Git metadata
    ↓
@@ -47,7 +47,7 @@ Cross-repo / ecosystem graph traversal
 Incident investigation
 ```
 
-Blastline uses:
+Janus uses:
 
 - **CVE Lite CLI** for repository-level dependency, vulnerability, maintenance-risk, and remediation intelligence.
 - **Git / CI** to identify repository state and trigger new snapshots.
@@ -64,7 +64,7 @@ A workspace can contain repositories from different providers.
 
 ### Repository
 
-A repository gets its own stable Blastline ID.
+A repository gets its own stable Janus ID.
 
 Its GitHub/GitLab/local location is metadata, not identity.
 
@@ -76,7 +76,7 @@ Each scan records an immutable view of dependency state for a repository at a sp
 
 A package version can be marked as affected for a known time window.
 
-Blastline then classifies tracked repositories as:
+Janus then classifies tracked repositories as:
 
 - **Affected**
 - **Clean**
@@ -85,14 +85,14 @@ Blastline then classifies tracked repositories as:
 ## Planned CLI
 
 ```bash
-blastline workspace create engineering
+janus workspace create engineering
 
 cd ./my-repo
-blastline link <workspace-id>
+janus link <workspace-id>
 
-blastline scan
+janus scan
 
-blastline investigate <package>@<version>
+janus investigate <package>@<version>
 ```
 
 ## MVP scope
@@ -163,7 +163,7 @@ Next.js dashboard
 
 ## Status
 
-Blastline is currently being built for HackHydra Track 2A: Supply Chain Blast Radius.
+Janus is currently being built for HackHydra Track 2A: Supply Chain Blast Radius.
 
 ## License
 
